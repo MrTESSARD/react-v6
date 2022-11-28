@@ -12,19 +12,25 @@ import Container from"./components/Container"
 // import Count from"./components/Count"
 import Button from"./components/Button"
 import Count from"./components/Count30"
-import Layout from"./components/Layout"
-import Box from"./components/Box"
+import Profile from"./components/Profile32"
 
 import './App.css';
 import FancyInput from "./components/FancyInput"
 
 const App=()=>{
 
+  const date=new Date()
+const fancyInputRef = useRef()
+const focusInput=(val)=>{
+  fancyInputRef.current.focus(val)
+  fancyInputRef.current.countMax()
 
+}
   return (
     <div className='container' >
-      <h1>useLayoutEffect</h1>
-    <Box/>
+      <FancyInput name="toto"   ref={fancyInputRef}/>
+      <button onClick={()=>focusInput(date.getDay())}>Cliquer</button>
+
     </div>
  
     

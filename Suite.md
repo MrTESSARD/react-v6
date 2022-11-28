@@ -95,3 +95,12 @@ const memorizedValue = useMemo(()=>{
 
 ## 33 - useImperativeHandle permet d'exposer la personalisation d'enfant jusq'au parent'
 personnalise l’instance qui est exposée au composant parent lors de l’utilisation de ref. Comme toujours, il vaut mieux s’abstenir d’utiliser du code impératif manipulant des refs dans la plupart des cas. useImperativeHandle est conçu pour être utilisé en conjonction avec forwardRef :
+
+## 34 - useLayoutEffect
+
+useEffect s'execute après le charfement de la page 
+useLayoutEffect n'attend pas le chargement de la page
+
+## Element.getBoundingClientRect()
+La méthode Element.getBoundingClientRect() retourne un objet DOMRect fournissant des informations sur la taille d'un élément et sa position relative par rapport à la zone d'affichage.
+## boxRef.current.offsetheight similaire
