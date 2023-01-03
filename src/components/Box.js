@@ -27,7 +27,7 @@ export default function Box() {
 
 
     useLayoutEffect(() => {
-        // console.log(boxRef.current.getBoundingClientRect())
+        console.log(boxRef.current.getBoundingClientRect())
         // console.log(boxRef.current.offsetHeight)
         if (boxRef.current.offsetHeight <150) {
             setHeight(height+100)

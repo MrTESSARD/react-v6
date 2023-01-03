@@ -44,3 +44,20 @@
 
   padding-bottom:0#61DAFB
 }
+
+#table{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+#table th{
+  text-align: center;
+  background-color: lightcoral;
+  color: rgb(0, 0, 0);
+  
+}
+#table td, #table th{
+  border: 1px solid rgba(128, 128, 128, 0.299);
+  padding: 12px;
+}

@@ -17,18 +17,14 @@ import Box from"./components/Box"
 
 import './App.css';
 import FancyInput from "./components/FancyInput"
-import ClickSayHello from "./components/ClickSayHello"
-import  MyContacts  from "./components/MyContacts"
 
 const App=()=>{
 
 
   return (
     <div className='container' >
-      <h1>Mes contactes</h1>
-      <MyContacts/>
-      {/* <ClickSayHello/> */}
-
+      <h1>useLayoutEffect</h1>
+    <Box/>
     </div>
  
     

@@ -18,7 +18,7 @@ import Box from"./components/Box"
 import './App.css';
 import FancyInput from "./components/FancyInput"
 import ClickSayHello from "./components/ClickSayHello"
-import  MyContacts  from "./components/MyContacts"
+import  MyContacts  from "./components/MyContacts36"
 
 const App=()=>{
 

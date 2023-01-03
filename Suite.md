@@ -104,3 +104,25 @@ useLayoutEffect n'attend pas le chargement de la page
 ## Element.getBoundingClientRect()
 La méthode Element.getBoundingClientRect() retourne un objet DOMRect fournissant des informations sur la taille d'un élément et sa position relative par rapport à la zone d'affichage.
 ## boxRef.current.offsetheight similaire
+
+## 35 Custom Hooks   -- Construire vos propres Hooks
+## 36 Custom Hooks  final -- Construire vos propres Hooks
+
+## 37 useDebugValue(value) 
+ Vous pouvez utiliser useDebugValue pour afficher une étiquette pour les Hooks personnalisés dans les outils de développement React (React DevTools, NdT).
+
+//Array
+useDebugValue("bonjour")
+useDebugValue(isLoading)
+useDebugValue(data)
+useDebugValue(fetchUrl)
+useDebugValue(JSON.stringify(data))
+
+//Cette fonction est appelée uniquement si les Hooks sont inspectés. Elle reçoit la valeur de débogage comme argument et devrait renvoyer la valeur formatée.
+useDebugValue(data,  val => JSON.stringify(val))
+
+Vérification : 
+    useDebugValue(data,  val => {
+        alert("useDebugValue")
+       return JSON.stringify(val)
+    })
