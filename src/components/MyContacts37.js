@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import useFetch from "../hooks/useFetch"
+import useFetch from "../hooks/useFetch37"
 import Search from "./Search"
 import useUpdateDocTitle from '../hooks/useUpdateDocTitle'
 import TableUsers from './TableUsers';
@@ -8,16 +8,12 @@ const MyContacts = () => {
     
     const [search, setSearch] = useState(''); //input
     const [resultSearch, setResultSearch] = useState([]);//resultat de la recherche
-    const {data, isLoading} = useFetch("https://jsonplaceholder.typicode.com/users");
     // console.log(users)
 
 
     // useUpdateDocTitle(search)
-
-    for (let index = 0; index < 100000000; index++) {
-        
-    }
     //custom hook
+    const {data, isLoading} = useFetch("https://jsonplaceholder.typicode.com/users");
     const filterUsers = () =>{
         const foundUsers = data.filter(user =>{
             return Object.values(user)

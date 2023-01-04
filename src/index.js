@@ -10,7 +10,9 @@ import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/css/bootstrap.min.css"; ///bootstrap clasic
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'), {
+  identifierPrefix: 'totoGeek-'
+});
 root.render(
   // <React.StrictMode>
     <App />

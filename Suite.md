@@ -126,3 +126,28 @@ Vérification :
         alert("useDebugValue")
        return JSON.stringify(val)
     })
+
+## 38 Custom Hook useFetch avec Async/Await
+
+## 39  useTransition()
+## 40  useDeferredValue()
+# useTransition() en action
+useTransition()peut être utilisé pour indiquer à React que certaines mises à jour d'état ont une priorité inférieure (c'est-à-dire que toutes les autres mises à jour d'état ou déclencheurs de rendu d'interface utilisateur ont une priorité plus élevée).
+
+Lors de l'appel useTransition(), vous récupérez un tableau avec exactement deux éléments : une isPendingvaleur booléenne, vous indiquant si la mise à jour d'état de faible priorité est toujours en attente, et une startTransition()fonction qui peut être enroulée autour d'une mise à jour d'état pour indiquer à React qu'il s'agit d'une valeur faible. -mise à jour prioritaire.
+
+
+La setFilterTerm()fonction de mise à jour d'état est enveloppée par startTransition()et donc React traite ce code de mise à jour d'état avec une priorité inférieure. Dans la démo, cela signifie que le champ de saisie reste réactif et réagit instantanément aux frappes. Sans l'utilisation de useTransition()l'application, l'application peut ne pas répondre, en particulier sur les appareils plus lents.
+
+# useDeferredValue() en action
+useTransition()vous donne un contrôle total puisque vous décidez quel code doit être encapsulé et traité comme "basse priorité". Parfois cependant, vous pourriez ne pas avoir accès au code de mise à jour de l'état réel (par exemple, parce qu'il est effectué par une bibliothèque tierce). Ou, pour une raison quelconque, vous ne pouvez pas utiliser useTransition().
+
+Dans de tels cas, vous pouvez utiliser à la useDeferredValue()place.
+
+Avec useDeferredValue(), vous n'enveloppez pas le code de mise à jour de l'état, mais plutôt la valeur qui est finalement générée ou modifiée en raison de la mise à jour de l'état (soit la valeur de l'état elle-même, soit une valeur calculée en fonction de la valeur de l'état
+
+## 41 useId (React >=18)
+useId is a hook for generating unique IDs that are stable across the server and client, while avoiding hydration mismatches.
+
+# useId supports an identifierPrefix to prevent collisions in multi-root apps. To configure, see the options for hydrateRoot and ReactDOMServer.
+

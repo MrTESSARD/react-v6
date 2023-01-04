@@ -1,8 +1,6 @@
-import {useDeferredValue}  from 'react'
+// import React from 'react'
 //sans destructuring
-const TableUsers = ({dataArray}) => {
-
-    const deferredValue = useDeferredValue (dataArray)
+const TableUsers = ({dataArray, notification}) => {
   return (
     <table id="table"> 
     <thead>
@@ -15,9 +13,9 @@ const TableUsers = ({dataArray}) => {
         
     </thead>  
     <tbody>
-        {/* {notification && <tr><td colSpan={4} style={{color: "red"  }}  >Veuillez patienter</td></tr>} */}
+        {notification && <tr><td colSpan={4} style={{color: "red"  }}  >Veuillez patienter</td></tr>}
         {
-            deferredValue.map((user) => {//sans destructuring
+            dataArray.map((user) => {//sans destructuring
                 return(
                     <tr key={user.id}>
                     <td>{user.name}</td>
