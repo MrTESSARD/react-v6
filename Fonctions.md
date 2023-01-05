@@ -8,3 +8,6 @@ console.dir(document) //voir les propriétés du documents #title par exemple
  const root = ReactDOM.createRoot(document.getElementById('root'), {
   identifierPrefix: 'totoGeek-'
 });
+
+## console
+console.table(dataArray)//afficher en tableau

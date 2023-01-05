@@ -1,8 +1,12 @@
 import {useDeferredValue}  from 'react'
 //sans destructuring
 const TableUsers = ({dataArray}) => {
-
-    const deferredValue = useDeferredValue (dataArray)
+    // console.table(dataArray)//afficher en tableau
+if (dataArray.length > 7 ) {
+    return new Error()
+    
+}
+    // const deferredValue = useDeferredValue (dataArray)
   return (
     <table id="table"> 
     <thead>
@@ -17,7 +21,7 @@ const TableUsers = ({dataArray}) => {
     <tbody>
         {/* {notification && <tr><td colSpan={4} style={{color: "red"  }}  >Veuillez patienter</td></tr>} */}
         {
-            deferredValue.map((user) => {//sans destructuring
+            dataArray.map((user) => {//sans destructuring
                 return(
                     <tr key={user.id}>
                     <td>{user.name}</td>

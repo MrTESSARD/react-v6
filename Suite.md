@@ -151,3 +151,10 @@ useId is a hook for generating unique IDs that are stable across the server and 
 
 # useId supports an identifierPrefix to prevent collisions in multi-root apps. To configure, see the options for hydrateRoot and ReactDOMServer.
 
+## 42 React.lazy & React.Suspense 
+# Le découpage dynamique de code
+Pour éviter de vous retrouver avec un bundle trop volumineux, il est bon d’anticiper les problèmes et de commencer à fractionner votre bundle
+# React.lazy 
+La fonction React.lazy vous permet d’afficher un composant importé dynamiquement comme n’importe quel autre composant.
+# React.Suspense 
+Le composant importé dynamiquement devrait être exploité dans un composant Suspense, qui nous permet d’afficher un contenu de repli (ex. un indicateur de chargement) en attendant que ce module soit chargé.

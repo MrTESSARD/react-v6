@@ -1,11 +1,8 @@
-import { useState, useEffect, lazy, Suspense } from 'react'
+import { useState, useEffect } from 'react'
 import useFetch from "../hooks/useFetch"
 import Search from "./Search"
 import useUpdateDocTitle from '../hooks/useUpdateDocTitle'
-import {ErrorBoundary} from 'react-error-boundary'
-// import TableUsers from './TableUsers';
-import ErrorFallback from './ErrorFallback';
-const TableUsers = lazy(() => import('./TableUsers'))// import dynamique
+import TableUsers from './TableUsers';
 
 const MyContacts = () => {
     
@@ -74,23 +71,14 @@ const MyContacts = () => {
             {
                 resultSearch.length === 0 && search !== '' ? msgDisplay("Pas de resultat!", "red")
                     :
-                    // search === '' ?  msgDisplay("Veuillez effectuer une recherche!", "black") 
-                    search === '' ? null
+                    search === '' ?  msgDisplay("Veuillez effectuer une recherche!", "black") 
+                    // search === '' ? null
 
                         :
-                        <ErrorBoundary FallbackComponent={ErrorFallback}  >
-
-                            
-                        <Suspense
-                            fallback={<div>Chargement en cours...</div>}>
-                            <TableUsers
-                                dataArray={resultSearch} />
-
-                        </Suspense>
-                        </ErrorBoundary>
 
 
-                            }
+                        <TableUsers
+                            dataArray={resultSearch} />}
         </>
     )
 

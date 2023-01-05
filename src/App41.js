@@ -1,6 +1,5 @@
 import './App.css';
 import Articles from './components/Articles';
-import MyContacts from './components/MyContacts';
 import NameFields from './components/NameFields';
 import NewLetter from './components/NewLetter';
 
@@ -9,8 +8,12 @@ const App = () => {
 
         <div className="App">
           <h1>Mes contactes</h1>
-          <MyContacts/>
-        
+          <NewLetter/>
+          <form>
+          <NameFields/>
+
+          </form>
+          <Articles/>
          
           {/* <NewLetter/> */}
           </div>
