@@ -11,3 +11,6 @@ console.dir(document) //voir les propriétés du documents #title par exemple
 
 ## console
 console.table(dataArray)//afficher en tableau
+
+## e.preventDefault()
+# blocker le refraichicement de la page 
