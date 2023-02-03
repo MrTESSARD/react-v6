@@ -73,6 +73,9 @@ console.dir(myTitle)
      }
 
 ##  27 - Hook de Contexte – useContext
+# const value = useContext(MyContext);
+https://fr.reactjs.org/docs/hooks-reference.html#usecontext
+
 ##  28 - useReducer – Partie 1/2
 ##  29 - useReducer – Partie 3
 ##  30 -  useCallback – Partie 1
