@@ -1,4 +1,4 @@
-18 -  BrowserRouter, Route, Switch, Nav, NavLink, Strict et Exact
+##  18 -  BrowserRouter, Route, Switch, Nav, NavLink, Strict et Exact
 
 {/* react-router-dom@5 */}
  <Route exact path="/" component={Docs}/> 
@@ -12,15 +12,15 @@
 
 <Switch> - permet d'ouvrir la premiere page qu'il trouve et si ne trouve pas affiche  <Route  component={ErrorPage}/>  
 
-19 - Les Redirections (redirections automatiques avec retard)
+##  19 - Les Redirections (redirections automatiques avec retard)
  setTimeout(() => {
       
         props.history.push("/")
     }, 5000);
 
-20 - 1/2. React Contexte (context.Provider - Context.Consumer)
+##  20 - 1/2. React Contexte (context.Provider - Context.Consumer)
 
-21 - 2/2
+##  21 - 2/2
 {/* <MyContext.Provider value={this.state.user}> */}//on peut enleer si on fais 
 import React from "react"
 const user={
@@ -38,23 +38,23 @@ pour import sans {toto} il faut faire export default toto sinon juste export tot
 context.type
 create.context
 
-22 - Hook d’état – useState – Partie 1
+##  22 - Hook d’état – useState – Partie 1
 Hook d’état – useState – Partie 2
 
 pour ne pas refraichir la page
  const handleTodo = (e)=>{
     e.preventDefault()
 
-23 - Hook d’effet – useEffect après Render
-24 - Hook d’effet – useEffect avec Condition
+##  23 - Hook d’effet – useEffect après Render
+##  24 - Hook d’effet – useEffect avec Condition
 useEffect(()=>{
     
   },[count] )
-25 - Hook d’effet – useEffect comme ComponentDidMount
+##  25 - Hook d’effet – useEffect comme ComponentDidMount
 useEffect(()=>{
     
   },[] )//si array vide s'execute une fois au demarege
-26 - Hook d’effet – useEffect avec Nettoyage
+##  26 - Hook d’effet – useEffect avec Nettoyage
 s'effectue à l'aide de  return()=>{//méthode de demontage egale à componentWillUnmount() 
 
 ## evenement touche bouton : 
