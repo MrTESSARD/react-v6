@@ -21,7 +21,7 @@
 ##  20 - 1/2. React Contexte (context.Provider - Context.Consumer)
 
 ##  21 - 2/2
-{/* <MyContext.Provider value={this.state.user}> */}//on peut enleer si on fais 
+{/* <MyContext.Provider value={this.state.user}> */}//on peut enlever si on fais 
 import React from "react"
 const user={
     name:"bart",
@@ -89,7 +89,7 @@ const incrementCountTwo=useCallback((val)=>{
   countTwo.value < 100 && setCountTwo({...countTwo, value:countTwo.value + val})
 }, [countTwo])
 
-## useMemo Renvoie use aleur mémorisée
+## useMemo Renvoie use valeur mémorisée
 const memorizedValue = useMemo(()=>{
   console.log(  "je suis dans isOverTen"  )   
    return count>10
